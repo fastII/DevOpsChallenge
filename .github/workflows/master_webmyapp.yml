@@ -37,4 +37,4 @@ jobs:
         slot-name: Producao
         publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_FA93CC25D1C645708B6AC9AE295FCD41 }}
         #package: ${{env.DOTNET_ROOT}}/MyWebApp
-        package:  ${{env.DOTNET_ROOT}}/MyWebApp
+        package:  '.'
