@@ -10,7 +10,7 @@ on:
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest
+    runs-on: windows-lastest
 
     steps:
     # checkout the repo      
@@ -34,7 +34,7 @@ jobs:
       uses: azure/webapps-deploy@v2
       with:
         app-name: 'webmyapp'
-        slot-name: 'slotname'
+        #slot-name: 'production'
         publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_FA93CC25D1C645708B6AC9AE295FCD41 }}
         #package: ${{env.DOTNET_ROOT}}/MyWebApp
         package:  ${{env.DOTNET_ROOT}}/webmyapp
