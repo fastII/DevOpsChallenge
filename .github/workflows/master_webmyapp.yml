@@ -27,8 +27,8 @@ jobs:
       run: dotnet build --configuration Release ./src/
 
     - name: dotnet publish
-     #run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/src/MyWebApp/
-      run: dotnet publish --configuration Release ./src/
+      run: dotnet publish -c Release ./src/ -o ${{env.DOTNET_ROOT}}/MyWebApp/
+    #run: dotnet publish --configuration Release ./src/
       
     - name: Run Azure webapp deploy action using publish profile credentials
       uses: azure/webapps-deploy@v2
@@ -36,5 +36,5 @@ jobs:
         app-name: 'webmyapp'
         slot-name: 'production'
         publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_FA93CC25D1C645708B6AC9AE295FCD41 }}
-        #package: ${{env.DOTNET_ROOT}}/MyWebApp
-        package:  ${{env.DOTNET_ROOT}}/src/
+        package: ${{env.DOTNET_ROOT}}/MyWebApp
+        #package:  ${{env.DOTNET_ROOT}}/src/
