@@ -45,8 +45,8 @@ jobs:
     - name: Download artifact from build job
       uses: actions/download-artifact@v2
       with:
-        #name: .net-app
-         name: .webmyapp
+         name: .net-app
+         
     - name: Azure Login
       uses: azure/login@v1.1
       with:
@@ -59,4 +59,4 @@ jobs:
         app-name: 'webmyapp'
         slot-name: 'production'
         #publish-profile: ${{ secrets.AZURE_DEPLOY }}
-        package: webmyapp.zip
+        #package: webmyapp.zip
