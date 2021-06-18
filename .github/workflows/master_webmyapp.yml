@@ -58,4 +58,4 @@ jobs:
         app-name: 'webmyapp'
         slot-name: 'production'
         #publish-profile: ${{ secrets.AZURE_DEPLOY }}
-        package: .
+        package: '*.zip'
