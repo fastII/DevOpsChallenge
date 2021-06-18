@@ -55,7 +55,7 @@ jobs:
       with:
         app-name: "webmyapp"
         slot-name: "production"
-        package: .
+        package: .net-app
 
    # - name: Deploy to Azure Web App
     #  id: deploy-to-webapp
