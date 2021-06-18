@@ -46,12 +46,17 @@ jobs:
       uses: actions/download-artifact@v2
       with:
         name: .net-app
-
+        
+    - name: Azure Login
+      uses: azure/login@v1.1
+      with:
+        creds: ${{ secrets.AZURE_DEPLOY }}
+          
     - name: Deploy to Azure Web App
       id: deploy-to-webapp
       uses: azure/webapps-deploy@v2
       with:
         app-name: 'producao'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_98681906e3b7448bbf0ce6c3ff4bf275 }}
+        #publish-profile: ${{ secrets.AzureAppService_PublishProfile_98681906e3b7448bbf0ce6c3ff4bf275 }}
         package: .
