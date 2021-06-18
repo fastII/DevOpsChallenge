@@ -33,8 +33,8 @@ jobs:
     - name: Run Azure webapp deploy action using publish profile credentials
       uses: azure/webapps-deploy@v2
       with:
-        app-name: 'webmyapp-Teste'
-        #slot-name: 'webmyapp-Teste'
+        app-name: 'webmyapp'
+        slot-name: 'webmyapp-Producao'
         publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_FA93CC25D1C645708B6AC9AE295FCD41 }}
-        package: '.'
-        #package:  ${{env.DOTNET_ROOT}}/src/
+        #package: '.'
+        package:  ${{env.DOTNET_ROOT}}/myapp
