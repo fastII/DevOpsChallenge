@@ -44,9 +44,9 @@ jobs:
     # Set the sonar.projectBaseDir analysis property
         projectBaseDir: ./src # optional, default is .
     # Login or authentication token of a SonarQube user
-        login: fastII
+        login: gitlab
     # Password that goes with the sonar.login username. This should be left blank if an authentication token is being used
-        password: andeduda@22
+        password: 9a444d9ca148c0efbcff42916a12e6bfd6388592
   deploy:
     runs-on: ubuntu-latest
     needs: build
