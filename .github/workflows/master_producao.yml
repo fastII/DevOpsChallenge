@@ -41,6 +41,7 @@ jobs:
        #- name: SonarCloud Scan
         #uses: SonarSource/sonarcloud-github-action@master
       with:
+        creds: ${{ secrets.SONAR_TOKEN }}
     # Additional arguments to the sonarcloud scanner
         #args: # optional
     # Set the sonar.projectBaseDir analysis property
