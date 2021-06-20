@@ -47,7 +47,7 @@ jobs:
         creds: ${{ secrets.SONAR_TOKEN }}
           #GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           #SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        login: gitlab
+        #login: gitlab
     # Password that goes with the sonar.login username. This should be left blank if an authentication token is being used
         #password: 
   deploy:
