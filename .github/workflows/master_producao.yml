@@ -46,8 +46,7 @@ jobs:
     # Login or authentication token of a SonarQube user
         login: fastII
     # Password that goes with the sonar.login username. This should be left blank if an authentication token is being used
-        password: 9a444d9ca148c0efbcff42916a12e6bfd6388592
-
+        password: #
   deploy:
     runs-on: ubuntu-latest
     needs: build
