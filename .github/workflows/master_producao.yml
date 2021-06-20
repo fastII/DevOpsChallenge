@@ -37,16 +37,16 @@ jobs:
     - name: SonarQube Scanner
   # You may pin to the exact commit or the version.
   # uses: ItsEcholot/sonarqube-action@8d64a899ea2c845dacb34f152a59ea9e557f6125
-  uses: ItsEcholot/sonarqube-action@v0.0.2
-  with:
+      uses: ItsEcholot/sonarqube-action@v0.0.2
+      with:
     # SonarQube server URL
-    host: https://sonarcloud.io/
+      host: https://sonarcloud.io/
     # Set the sonar.projectBaseDir analysis property
-    projectBaseDir: # optional, default is .
+      projectBaseDir: ./src # optional, default is .
     # Login or authentication token of a SonarQube user
-    login: fastII
+      login: fastII
     # Password that goes with the sonar.login username. This should be left blank if an authentication token is being used
-    password: 9a444d9ca148c0efbcff42916a12e6bfd6388592
+      password: 9a444d9ca148c0efbcff42916a12e6bfd6388592
 
   deploy:
     runs-on: ubuntu-latest
