@@ -58,5 +58,5 @@ jobs:
       with:
         app-name: 'producao'
         slot-name: 'production'
-        #publish-profile: ${{ secrets.AzureAppService_PublishProfile_98681906e3b7448bbf0ce6c3ff4bf275 }}
+        #publish-profile: 
         package: .
